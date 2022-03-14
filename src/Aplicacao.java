@@ -56,7 +56,7 @@ public class Aplicacao {
 
                 // Qual atriz entre 20 e 30 anos que mais vezes foi vencedora?
                 Map<String, Long> atrizesEntre20e30NroPremios = atrizes.stream()
-                        .filter(c -> c.getIdade() > 20 && c.getIdade() < 30)
+                        .filter(c -> c.getIdade() >= 20 && c.getIdade() <= 30)
                         .collect(
                                 Collectors.groupingBy(
                                         p -> p.getNome(),
